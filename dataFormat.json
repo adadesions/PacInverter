@@ -1,0 +1,10 @@
+{
+        "energyLevel": 100,
+        "patternNo": 5,
+        "remainTime": "4 h 30 m",
+        "temp": "36 °C",
+        "kWatt": "250 kW-hr",
+        "voltage": "12.5 Volt",
+        "ampere": "20,000 A",
+        "capacity": "35,000 mAh"
+}
