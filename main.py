@@ -27,8 +27,6 @@ if __name__ == '__main__':
     
     print(parsed_argv)
     pAPI = PacpowerAPI('pacpower', 'pacpower1234', 'DXE3A0305B', 54)
-    # pAPI = PacpowerAPI(parsed_argv['user'], parsed_argv['pass'],
-    # parsed_argv['storage_id'], parsed_argv['max_volt'])
     pAPI.initAPI()
 
     while True: 
@@ -37,5 +35,3 @@ if __name__ == '__main__':
         print(newData)
         pAPI.send_to_cloud("pac0")
 
-        # sleep for 15 mins
-        time.sleep(60*15)

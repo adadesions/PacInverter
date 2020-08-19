@@ -32,14 +32,6 @@ class PacpowerAPI:
         self.plant_id = plantInfo['data'][0]['plantId']
 
 
-    # def get_remain_battery(self):
-    #     raw_vbat = float(self.get_voltage())
-    #     percent = int((raw_vbat / self.maxVolt) * 100)
-    #     if percent > 100:
-    #         percent = 100
-
-    #     return percent
-
     def get_remain_battery(self):
         battery_cap = self.api.storage_detail(self.storage_id)['capacity']
         # print('===== Storage Detail =====')
@@ -66,9 +58,6 @@ class PacpowerAPI:
         return voltage
 
 
-
-
-
     def get_data_pack(self):
         package = {
             'energyLevel': self.get_remain_battery(),
@@ -88,3 +77,4 @@ class PacpowerAPI:
         ref = db.reference(node_name)
         ref.push(self.get_data_pack())
         print("=== Saved ===")
+
