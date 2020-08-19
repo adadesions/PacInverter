@@ -1,0 +1,1 @@
+{'user': '', 'pass': '', 'storage_id': '', 'max_volt': '', 'location': ''}

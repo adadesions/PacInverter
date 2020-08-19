@@ -26,15 +26,16 @@ if __name__ == '__main__':
             parsed_argv['location'] = val
     
     print(parsed_argv)
-    # pAPI = PacpowerAPI('pacpower', 'pacpower1234', 'XJD59310BA', 53)
-    pAPI = PacpowerAPI(parsed_argv['user'], parsed_argv['pass'],
-    parsed_argv['storage_id'], parsed_argv['max_volt'])
+    pAPI = PacpowerAPI('pacpower', 'pacpower1234', 'DXE3A0305B', 54)
+    # pAPI = PacpowerAPI(parsed_argv['user'], parsed_argv['pass'],
+    # parsed_argv['storage_id'], parsed_argv['max_volt'])
     pAPI.initAPI()
 
     while True: 
         newData = pAPI.get_data_pack()
         print("NewData")
         print(newData)
-        pAPI.send_to_cloud(parsed_argv['location'])
+        pAPI.send_to_cloud("pac0")
 
-        time.sleep(10)
+        # sleep for 15 mins
+        time.sleep(60*15)
