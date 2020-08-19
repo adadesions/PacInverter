@@ -29,9 +29,8 @@ if __name__ == '__main__':
     pAPI = PacpowerAPI('pacpower', 'pacpower1234', 'DXE3A0305B', 54)
     pAPI.initAPI()
 
-    while True: 
-        newData = pAPI.get_data_pack()
-        print("NewData")
-        print(newData)
-        pAPI.send_to_cloud("pac0")
+    newData = pAPI.get_data_pack()
+    print("NewData")
+    print(newData)
+    pAPI.send_to_cloud("pac0")
 
