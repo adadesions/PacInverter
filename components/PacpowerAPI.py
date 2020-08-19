@@ -42,14 +42,14 @@ class PacpowerAPI:
 
     def get_remain_battery(self):
         battery_cap = self.api.storage_detail(self.storage_id)['capacity']
-        print('===== Storage Detail =====')
-        print(self.api.storage_detail(self.storage_id))
-        print('===== Storage Overview=====')
-        print(self.api.storage_energy_overview(self.plant_id, self.storage_id))
-        print('===== Storage params=====')
-        print(self.api.storage_params(self.storage_id))
-        print('===== Device List =====')
-        print(self.api.inverter_list(self.plant_id))
+        # print('===== Storage Detail =====')
+        # print(self.api.storage_detail(self.storage_id))
+        # print('===== Storage Overview=====')
+        # print(self.api.storage_energy_overview(self.plant_id, self.storage_id))
+        # print('===== Storage params=====')
+        # print(self.api.storage_params(self.storage_id))
+        # print('===== Device List =====')
+        # print(self.api.inverter_list(self.plant_id))
 
         return battery_cap
 
